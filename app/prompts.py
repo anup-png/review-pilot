@@ -10,7 +10,7 @@ Tasks:
    - negative
    - neutral
 
-2. Provide a one-line explanation for your classification.
+2. Provide a one-line description for your classification.
 
 Review:
 {review}

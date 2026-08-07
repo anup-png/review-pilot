@@ -18,3 +18,30 @@ def review_analyzer(state:ReviewState):
     "sentiment": result.sentiment,
     "description": result.description
     }
+
+
+def positive_reply(state):
+    print("Positive Path")
+    return {"reply": "Thank you for your feedback!"}
+
+
+def neutral_reply(state):
+    print("Neutral Path")
+    return {"reply": "Thank you for your review."}
+
+
+def negative_analysis(state):
+    print("Negative Path")
+    return {"reply": "We're sorry about your experience."}
+
+def route_review(state: ReviewState):
+
+    sentiment = state["sentiment"]
+
+    if sentiment == "positive":
+        return "positive"
+
+    elif sentiment == "negative":
+        return "negative"
+
+    return "neutral"

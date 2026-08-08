@@ -32,7 +32,7 @@ def neutral_reply(state):
 
 def negative_analysis(state):
     print("Negative Path")
-    return {"reply": "We're sorry about your experience."}
+    return {"reply": "We're sorry about your experience.Kindly explain more about the issue."}
 
 def route_review(state: ReviewState):
 

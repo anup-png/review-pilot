@@ -1,8 +1,32 @@
-from langchain_core import output_parsers
-from pydantic import BaseModel,Field
+from pydantic import BaseModel, Field
 from typing import Literal
 
-class ReviewAnalzer(BaseModel):
 
-      sentiment:Literal["negative","positive",'neutral']=Field(description="tone of th user")
-      description:str
+class ReviewAnalyzer(BaseModel):
+
+    sentiment: Literal["positive", "negative", "neutral"] = Field(
+        description="Sentiment of the customer review"
+    )
+
+    description: str = Field(
+        description="One-line explanation of the sentiment"
+    )
+
+
+class NegativeReviewAnalyzer(BaseModel):
+
+    emotion: str = Field(
+        description="Customer emotion"
+    )
+
+    issue: str = Field(
+        description="Main issue mentioned in the review"
+    )
+
+    urgency: Literal["low", "medium", "high"] = Field(
+        description="Urgency level"
+    )
+
+    needs_human: bool = Field(
+        description="Whether the review should be escalated to a human agent"
+    )

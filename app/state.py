@@ -1,8 +1,16 @@
-from typing import TypedDict,Literal
+from typing import Literal
+from typing_extensions import TypedDict
+
 
 class ReviewState(TypedDict):
+    review: str
 
-    review:str
-    sentiment:Literal["negative","positive","neutral"]
-    description:str
-    reply:str
+    sentiment: Literal["positive", "negative", "neutral"]
+    description: str
+
+    emotion: str
+    issue: str
+    urgency: str
+    needs_human: bool
+
+    reply: str

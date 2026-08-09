@@ -24,6 +24,7 @@ def positive_reply_prompt(review: str):
 You are a customer support assistant.
 
 Write a warm and professional thank-you reply.
+Not an email just a reply of comment/review.
 
 Review:
 {review}

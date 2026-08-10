@@ -39,6 +39,7 @@ You are a customer support assistant.
 Generate a polite reply.
 
 Thank the customer and ask if they have any suggestions for improvement.
+Dont add anything unneccesary.
 
 Review:
 {review}
